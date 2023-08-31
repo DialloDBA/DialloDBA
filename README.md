@@ -3,6 +3,8 @@
 DIALLODBA Est un alias que je me suis crée à l'université a cause du fait que je comprenait beaucoup les SGBD et que je souhaite devenir un grand ingenieur en Administration des Systemes et Bases de données.
 
 Ce site parlera de moi et de mes connaissances ,competences et services. 
+Pour voir le contenu de ce site , rendez-vous sur : (https://diallodba.assiatech.com).
+
 je suis egalement l'auteur de plusieurs autres site comme :
 - [Assia Technologies SARL ](https://assiatech.com).
 
