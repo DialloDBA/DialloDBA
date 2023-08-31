@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\User;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,7 +14,46 @@ return new class extends Migration
     {
         Schema::create('information', function (Blueprint $table) {
             $table->id();
+            $table->string("entite")->default(ucfirst(str()->lower(env("APP_NAME"))));
+            $table->string("small_logo")->default('ui/images/diallodba-logo.jpg');
+            $table->string("full_logo")->default('ui/images/diallodba-logo.jpg');
+            $table->string("telephone_1")->unique();
+            $table->string("telephone_2")->unique()->nullable();
+            $table->string("email_1")->unique();
+            $table->string("email_2")->unique()->nullable();
+            $table->string("adresse_1")->unique();
+            $table->string("adresse_2")->unique()->nullable();
+            $table->text("small_description")->nullable();
+            $table->longtext("description")->nullable();
+            $table->string("fax")->unique()->nullable();
+            $table->string("facebook")->unique()->nullable();
+            $table->string("twitter")->unique()->nullable();
+            $table->string("instragram")->unique()->nullable();
+            $table->string("linkedin")->unique()->nullable();
+            $table->string("youtube")->unique()->nullable();
+            $table->string("tiktok")->unique()->nullable();
+            $table->string("skype")->unique()->nullable();
+            $table->string("googleplus")->unique()->nullable();
+            $table->integer("solde_sms")->default(0);
+            $table->integer("sms_envoye")->default(0);
+            $table->integer("sms_total")->default(0);
+            $table->float("pau_sms",8,2)->nullable();
+            $table->string("date_expiration_sms")->nullable();
+            $table->enum('actived',['0','1'])->default(1);
+            
+            $table->string("icone_72")->default('ui/images/diallodba-logo-72.jpg');
+            $table->string("icone_96")->default('ui/images/diallodba-logo-92.jpg');
+            $table->string("icone_128")->default('ui/images/diallodba-logo-128.jpg');
+            $table->string("icone_144")->default('ui/images/diallodba-logo-144.jpg');
+            $table->string("icone_152")->default('ui/images/diallodba-logo-152.jpg');
+            $table->string("icone_192")->default('ui/images/diallodba-logo-192.jpg');
+            $table->string("icone_384")->default('ui/images/diallodba-logo-384.jpg');
+            $table->string("icone_512")->default('ui/images/diallodba-logo-512.jpg');
+
+            $table->foreignidFor(User::class);
             $table->timestamps();
+            $table->softDeletes();
+            $table->integer('deleted_by')->nullable();
         });
     }
 
