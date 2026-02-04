@@ -83,5 +83,3 @@ Je suis le fondateur d’**Atanax**, une initiative technologique dédiée à la
 - 💼 LinkedIn : https://www.linkedin.com/in/diallodba
 - 🐙 GitHub : https://github.com/diallodba
 - 📧 Email : contact@atanax.com
-
-<a href="./README.en.md">🇬🇧 English</a> | <a href="./README.fr.md">🇫🇷 Français</a>
